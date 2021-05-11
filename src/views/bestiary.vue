@@ -1,7 +1,7 @@
 <template>
   <div class="monster">
     <h1>{{ $route.params.monster }}</h1>
-    <monsterSheet :attributes="objetMonstre"/>
+    <monsterSheet :attributes="attributes"/>
   </div>
 </template>
 
