@@ -4,12 +4,12 @@
         <table>
             <thead>
                 <tr>
-                    <th v-for="(item, index) in monster.attributes" :item="item" :key="index">{{ index }}</th>
+                    <th v-for="(item, index) in attributes" :item="item" :key="index">{{ index }}</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td v-for="(item, index) in monster.attributes" :item="item" :key="index">{{ item }} <span>({{ calculBonus(item) }})</span></td>
+                    <td v-for="(item, index) in attributes" :item="item" :key="index">{{ item }} <span>({{ calculBonus(item) }})</span></td>
                 </tr>
             </tbody>
         </table>
@@ -22,17 +22,15 @@ import bestiary from '../datas/bestiary.js'
 
 export default {
     name: 'monster_sheet',
-    created () {
-    },
+    props: [attributes],
     data () {
-        console.log(bestiary)
         let monster_id = this.$router.currentRoute.value.params.monster
         return {
             monster: bestiary[monster_id],
         }
     },
-    methods () {
-       calculBonus = library.calculBonus 
+    methods: {
+       calculBonus: library.calculBonus
     }
 }
 </script>
