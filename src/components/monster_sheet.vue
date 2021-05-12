@@ -22,7 +22,10 @@ import bestiary from '../datas/bestiary.js'
 
 export default {
     name: 'monster_sheet',
-    props: [attributes],
+    props: ['attributes'],
+    created() {
+        console.log(this.attributes)
+    },
     data () {
         let monster_id = this.$router.currentRoute.value.params.monster
         return {

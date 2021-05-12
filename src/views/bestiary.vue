@@ -17,7 +17,7 @@ export default {
     data () {
         let monster_id = this.$router.currentRoute.value.params.monster
         return {
-            attributes: bestiary[monster_id]
+            attributes: bestiary[monster_id].attributes
         }
     },
     mounted () {
