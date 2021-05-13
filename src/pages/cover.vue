@@ -3,12 +3,18 @@
         <span class="home-logo">LDVELH</span>
         <a href="/player">player</a><br>
         <a class="bestiary_link" href="/bestiary/gobelin">Gobelin</a>
+        <bestiaryLink :id="gobelin"/>
     </div>
 </template>
 
 <script>
+import bestiaryLink from '@/components/bestiary_link.vue'
+
 export default {
     name: 'pageCover',
+    components: {
+        bestiaryLink
+    }
 }
 </script>
 
@@ -26,7 +32,7 @@ export default {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     &::before {
-        content: "";
+        /*content: "";*/
     }
 }
 h3 {

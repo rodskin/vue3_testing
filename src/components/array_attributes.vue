@@ -7,15 +7,13 @@
         </thead>
         <tbody>
             <tr>
-                <td v-for="(item, index) in attributes" :item="item" :key="index">{{ item }} <span>({{ calculBonus(item) }})</span></td>
+                <td v-for="(item, index) in attributes" :item="item" :key="index">{{ item }} <span>({{ this.$library.calculBonus(item) }})</span></td>
             </tr>
         </tbody>
     </table>
 </template>
 
 <script>
-import library from '../lib'
-
 export default {
     name: 'array_attributes',
     props: ['attributes'],
@@ -23,9 +21,6 @@ export default {
         return {
             monster: this.attributes,
         }
-    },
-    methods: {
-       calculBonus: library.calculBonus
     }
 }
 </script>

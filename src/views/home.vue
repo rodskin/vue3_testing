@@ -13,9 +13,3 @@ export default {
     }
 }
 </script>
-<style scoped lang="scss">
-    .bestiary_link {
-        color: red;
-        text-decoration: none;
-    }
-</style>

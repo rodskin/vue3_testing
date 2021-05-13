@@ -18,10 +18,6 @@ export default {
         return {
             monster: this.$bestiary[monster_id],
         }
-    },
-    created () {
-    },
-    mounted () {
     }
 }
 
