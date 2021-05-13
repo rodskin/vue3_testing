@@ -1,18 +1,21 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <pageCover/>
 </template>
 
 <script>
 // @ is an alias to /src
-import helloWorld from '@/components/hello_world.vue'
+import pageCover from '@/pages/cover.vue'
 
 export default {
-  name: 'home',
-  components: {
-    helloWorld
-  }
+    name: 'home',
+    components: {
+        pageCover
+    }
 }
 </script>
+<style scoped lang="scss">
+    .bestiary_link {
+        color: red;
+        text-decoration: none;
+    }
+</style>

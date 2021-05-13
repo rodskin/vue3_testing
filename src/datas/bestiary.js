@@ -1,6 +1,6 @@
 const bestiary = {
    gobelin: {
-        nom: 'Gobelin',
+        name: 'Gobelin',
         attributes: {
             for: 9,
             dex: 14,
@@ -10,6 +10,10 @@ const bestiary = {
             cha: 8
         },
         xp: 50,
+        ac: {
+            armor: 'leather_armor',
+            shield: true
+        },
         competences: {
             acrobatie: {
                 nom: 'Acrobatie',

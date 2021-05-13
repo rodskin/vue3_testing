@@ -1,6 +1,10 @@
 const library = {
     calculBonus : function (carac) {
-        return Math.floor((carac - 10) / 2);
+        let bonus = Math.floor((carac - 10) / 2)
+        if (bonus >= 0) {
+            bonus = '+' + bonus
+        }
+        return bonus
     }
 }
 

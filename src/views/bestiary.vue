@@ -1,24 +1,25 @@
 <template>
   <div class="monster">
-    <h1>{{ $route.params.monster }}</h1>
-    <monsterSheet :attributes="attributes"/>
+    <h1>{{ monster.name }}</h1>
+    <arrayAttributes :attributes="monster.attributes"/>
   </div>
 </template>
 
 <script>
-import monsterSheet from '@/components/monster_sheet.vue'
-import bestiary from '../datas/bestiary.js'
+import arrayAttributes from '@/components/array_attributes.vue'
 
 export default {
-    name: 'Monster',
+    name: 'monster',
     components: {
-        monsterSheet
+        arrayAttributes
     },
     data () {
         let monster_id = this.$router.currentRoute.value.params.monster
         return {
-            attributes: bestiary[monster_id].attributes
+            monster: this.$bestiary[monster_id],
         }
+    },
+    created () {
     },
     mounted () {
     }
