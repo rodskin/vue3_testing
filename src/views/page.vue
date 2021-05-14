@@ -7,11 +7,10 @@
 </template>
 
 <script>
-    import myPages from '@/pages'
     export default {
         name: 'page',
         components: {
-            pageLoaded: myPages.start
+            pageLoaded: () => import('@/pages/start.vue')
         }
     }
 </script>
