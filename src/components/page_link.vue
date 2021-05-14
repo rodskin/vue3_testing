@@ -1,7 +1,7 @@
 <template>
     <a :class="link_class" :href="page_href">
         <font-awesome-icon icon="exclamation-triangle" v-if="link_class == 'page_link_ko'" />
-        {{ page_title }}
+        <span v-if="link_class == 'page_link_ko'">{{ page_slug }} -> </span>{{ page_title }}
     </a>
 </template>
 
@@ -13,6 +13,7 @@ export default {
         return {
             link_class: 'page_link',
             page_href: '/page/' + this.page,
+            page_slug: this.page,
             page_title: this.title
         }
     },
