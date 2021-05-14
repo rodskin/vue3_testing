@@ -3,7 +3,7 @@
         <span class="home-logo">LDVELH</span>
         <a href="/player">player</a><br>
         <bestiaryLink id="gobelin"/><br>
-        <pageLink filename="start"/>
+        <pageLink page="bifurcation" title="Démarrer"/>
     </div>
 </template>
 
