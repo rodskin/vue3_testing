@@ -8,13 +8,8 @@
 </template>
 
 <script>
-import bestiaryLink from '@/components/bestiary_link.vue'
-
 export default {
-    name: 'pageCover',
-    components: {
-        bestiaryLink
-    }
+    name: 'pageCover'
 }
 </script>
 
