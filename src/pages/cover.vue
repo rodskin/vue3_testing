@@ -4,6 +4,8 @@
         <a href="/player">player</a><br>
         <a class="bestiary_link" href="/bestiary/gobelin">Gobelin</a>
         <bestiaryLink id="gobelin"/>
+        <br>
+        <pageLink filename="start"/>
     </div>
 </template>
 
