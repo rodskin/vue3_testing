@@ -2,9 +2,7 @@
     <div class="cover">
         <span class="home-logo">LDVELH</span>
         <a href="/player">player</a><br>
-        <a class="bestiary_link" href="/bestiary/gobelin">Gobelin</a>
-        <bestiaryLink id="gobelin"/>
-        <br>
+        <bestiaryLink id="gobelin"/><br>
         <pageLink filename="start"/>
     </div>
 </template>
@@ -18,7 +16,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .home-logo {
-    font-size: 20rem;
+    font-size: 10rem;
     color: #bab468;
     display: block;
     margin: 1rem;
