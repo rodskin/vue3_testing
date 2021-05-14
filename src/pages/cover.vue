@@ -3,7 +3,7 @@
         <span class="home-logo">LDVELH</span>
         <a href="/player">player</a><br>
         <a class="bestiary_link" href="/bestiary/gobelin">Gobelin</a>
-        <bestiaryLink :id="gobelin"/>
+        <bestiaryLink id="gobelin"/>
     </div>
 </template>
 
