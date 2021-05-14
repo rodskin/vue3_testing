@@ -1,14 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import home from '../views/home.vue'
-import bestiary from '../views/bestiary.vue'
-import player from '../views/player.vue'
-import page from '../views/page.vue'
+import home from '../views/home'
+import about from '../views/about'
+import bestiary from '../views/bestiary'
+import player from '../views/player'
+import page from '../views/page'
 
 const routes = [
     {
         path: '/',
         name: 'Home',
         component: home
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: about
     },
     {
         path: '/page/:filename',

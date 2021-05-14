@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import arrayAttributes from '@/components/array_attributes.vue'
+import arrayAttributes from '@/components/array_attributes'
 
 export default {
     name: 'monster',
