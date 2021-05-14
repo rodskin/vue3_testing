@@ -7,6 +7,7 @@
 
 <script>
 import arrayAttributes from '@/components/array_attributes.vue'
+import races from '@/datas/races.js'
 
 export default {
     name: 'player',
@@ -14,6 +15,7 @@ export default {
         arrayAttributes
     },
     created () {
+        console.log(races.demi_elfe)
     },
     mounted () {
     }
