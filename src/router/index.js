@@ -17,7 +17,7 @@ const routes = [
         component: about
     },
     {
-        path: '/page/:filename',
+        path: '/page/:page',
         name: 'Page',
         component: page
     },
