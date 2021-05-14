@@ -1,6 +1,6 @@
 <template>
     <a :class="link_class" :href="page_href">
-        <font-awesome-icon icon="exclamation-triangle" v-if="link_class == 'page_link_ko'" />
+        <font-awesome-icon icon="exclamation-triangle" v-if="link_class.indexOf('link_ko') != -1" />
         <span v-if="link_class == 'page_link_ko'">{{ page_slug }} -> </span>{{ page_title }}
     </a>
 </template>
@@ -22,23 +22,11 @@ export default {
             // test pour vérifier si le fichier de la page existe
             this.storyToRead = require('@/pages/' + this.page)
         } catch (e) {
-            this.link_class = 'page_link_ko'
+            this.link_class = [
+                'page_link_ko',
+                'link_ko'
+            ].join(' ')
         }
     }
 }
 </script>
-
-<style scoped lang="scss">
-    a {
-        text-decoration: none;
-        font-weight: bold;
-        &.page_link {
-            color: cyan;
-        }
-        &.page_link_ko {
-            color: purple;
-            text-transform: uppercase;
-        }
-    }
-</style>
-

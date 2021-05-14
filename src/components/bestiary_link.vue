@@ -1,6 +1,6 @@
 <template>
     <a :class="link_class" :href="bestiary_href">
-        <font-awesome-icon icon="exclamation-triangle" v-if="link_class == 'bestiary_link_ko'" />
+        <font-awesome-icon icon="exclamation-triangle" v-if="link_class.indexOf('link_ko') != -1" />
         {{ monster_name }}
     </a>
 </template>
@@ -22,7 +22,10 @@ export default {
     },
     created () {
         if (typeof this.$bestiary[this.id] === 'undefined') {
-            this.link_class = 'bestiary_link_ko'
+            this.link_class = [
+                'bestiary_link_ko',
+                'link_ko'
+            ].join(' ')
 
         } else {
             this.bestiary = this.$bestiary[this.id]
@@ -31,17 +34,3 @@ export default {
     }
 }
 </script>
-
-<style scoped lang="scss">
-    a {
-        text-decoration: none;
-        font-weight: bold;
-        &.bestiary_link {
-            color: red;
-        }
-        &.bestiary_link_ko {
-            color: purple;
-            text-transform: uppercase;
-        }
-    }
-</style>

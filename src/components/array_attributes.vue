@@ -16,11 +16,6 @@
 <script>
 export default {
     name: 'array_attributes',
-    props: ['attributes'],
-    data () {
-        return {
-            monster: this.attributes,
-        }
-    }
+    props: ['attributes']
 }
 </script>

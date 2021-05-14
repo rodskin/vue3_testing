@@ -1,4 +1,4 @@
-const player = {
+let player = {
     name: 'Player',
     attributes: {
         for: 8,

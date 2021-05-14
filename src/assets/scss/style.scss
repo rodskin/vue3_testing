@@ -1,0 +1,23 @@
+.player_name {
+    color: $player_name_color;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    &.link_ko {
+        text-transform: uppercase;
+    }
+    &.bestiary_link {
+        color: $bestiary_link;
+    }
+    &.bestiary_link_ko {
+        color: $error_link;
+    }
+    &.page_link {
+        color: $page_link;
+    }
+    &.page_link_ko {
+        color: $error_link;
+    }
+}

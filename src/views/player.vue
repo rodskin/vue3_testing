@@ -1,24 +1,24 @@
 <template>
-  <div class="player">
-    <h1>{{ this.$player.name }}</h1>
-    <arrayAttributes :attributes="this.$player.attributes"/>
-  </div>
+    <div class="player">
+        <goBack />
+        <h1><input v-model="player.name" /></h1>
+        <arrayAttributes :attributes="this.$player.attributes"/>
+    </div>
 </template>
 
 <script>
-import arrayAttributes from '@/components/array_attributes'
-import races from '@/datas/races.js'
+    import arrayAttributes from '@/components/array_attributes'
+    import goBack from '@/components/back_button'
 
-export default {
-    name: 'player',
-    components: {
-        arrayAttributes
-    },
-    created () {
-        console.log(races.demi_elfe)
-    },
-    mounted () {
+    export default {
+        name: 'player',
+        components: {
+            arrayAttributes, goBack
+        },
+        data () {
+            return {
+                player: this.$player
+            }
+        }
     }
-}
-
 </script>
