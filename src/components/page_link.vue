@@ -1,5 +1,8 @@
 <template>
-    <a class="page_link" :href="page_href">{{ page_title }}</a>
+    <a :class="link_class" :href="page_href">
+        <font-awesome-icon icon="exclamation-triangle" v-if="link_class == 'page_link_ko'" />
+        {{ page_title }}
+    </a>
 </template>
 
 <script>
@@ -8,18 +11,33 @@ export default {
     props: ['page', 'title'],
     data() {
         return {
+            link_class: 'page_link',
             page_href: '/page/' + this.page,
             page_title: this.title
+        }
+    },
+    created() {
+        try {
+            // test pour vérifier si le fichier de la page existe
+            this.storyToRead = require('@/pages/' + this.page)
+        } catch (e) {
+            this.link_class = 'page_link_ko'
         }
     }
 }
 </script>
 
 <style scoped lang="scss">
-    .page_link {
-        color: cyan;
+    a {
         text-decoration: none;
         font-weight: bold;
+        &.page_link {
+            color: cyan;
+        }
+        &.page_link_ko {
+            color: purple;
+            text-transform: uppercase;
+        }
     }
 </style>
 

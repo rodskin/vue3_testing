@@ -1,9 +1,9 @@
 <template>
     <div class="cover">
-        <span class="home-logo">LDVELH</span>
+        <span class="home-logo"><font-awesome-icon icon="book" /><br></span>
         <a href="/player">player</a><br>
         <bestiaryLink id="gobelin"/><br>
-        <pageLink page="bifurcation" title="Démarrer"/>
+        <pageLink page="bifurcations" title="Démarrer"/>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .home-logo {
-    font-size: 10rem;
+    font-size: 20rem;
     color: #bab468;
     display: block;
     margin: 1rem;
